@@ -6,14 +6,13 @@
 Summary:	Python wrapper for libcangjie, the library implementing the Cangjie input method
 Summary(pl.UTF-8):	Interfejs Pythona do libcangjie - biblioteki implementującej metodę wprowadzania Cangjie
 Name:		python-cangjie
-Version:	1.2
-Release:	4
+Version:	1.3
+Release:	1
 License:	LGPL v3+
 Group:		Libraries/Python
 #Source0Download: https://github.com/Cangjians/pycangjie/releases
 Source0:	https://github.com/Cangjians/pycangjie/releases/download/v%{version}/cangjie-%{version}.tar.xz
-# Source0-md5:	bcdd86b5cc9c2deef95214e0852a1ee0
-Patch0:		%{name}-cython.patch
+# Source0-md5:	25a618f487a6e041d8ebe76881c83b22
 URL:		https://github.com/Cangjians/pycangjie
 BuildRequires:	autoconf >= 2.63
 BuildRequires:	automake >= 1:1.11
@@ -58,7 +57,6 @@ implementującej metodę wprowadzania znaków chińskich Cangjie.
 
 %prep
 %setup -q -n cangjie-%{version}
-%patch0 -p1
 
 %build
 %{__libtoolize}
